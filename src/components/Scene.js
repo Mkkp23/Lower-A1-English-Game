@@ -4,10 +4,13 @@ import { UserDataContext } from "../contexts/UserContext";
 import BaseDialog from "./BaseDialog";
 
 import characters from "../data/characters";
+import scenes from "../data/scenes";
 
-const Dialog = ({ character, message, onContinue = () => { }, input }) => {
+const Scene = ({ character, scene, message, onContinue = () => { }, input }) => {
     const { userData, setUserData } = useContext(UserDataContext);
+
     const characterObj = characters.find((char) => char.id === Number(character)) || characters[0];
+    const sceneObj = scenes.find((sce) => sce.id === Number(scene)) || scenes[0];
 
     const [inputValue, setInputValue] = useState(userData?.[input] || "");
 
@@ -32,8 +35,9 @@ const Dialog = ({ character, message, onContinue = () => { }, input }) => {
             onInputChange={(e) => setInputValue(e.target.value)}
             onContinue={handleContinue}
             showInput={!!input}
+            sceneObj={sceneObj}
         />
     );
 };
 
-export default Dialog;
+export default Scene;
