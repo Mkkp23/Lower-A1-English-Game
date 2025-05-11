@@ -33,8 +33,49 @@ const characters = [
         job: "Note from receptionist",
         description: "A note from the receptionist with a code that might be important.",
         image: "colors-puzzle.png",
-    }
-
+    },
+    {
+        id: 6,
+        name: "👨 Leon",
+        job: "Hobo",
+        description: "A hobo who seems to know more than he lets on.",
+        image: "hobo-leon.png",
+    },
+    {
+        id: 7,
+        name: "📝 Note",
+        job: "Key to being a millionaire",
+        description: "A note that is key to being a millionaire.",
+        image: "note-riddle.png",
+    },
+    {
+        id: 8,
+        name: "☕ Noah",
+        job: "Barista",
+        description: "A barista who serves the best coffee in town and knows all the gossip.",
+        image: "barista-noah.png",
+    },
+    {
+        id: 9,
+        name: "📦 Box",
+        job: "Boxing",
+        description: "A box that might contain something important.",
+        image: "box-puzzle.png",
+    },
+    {
+        id: 10,
+        name: "📷 Shop",
+        job: "Photo",
+        description: "A photo that might contain something important.",
+        image: "shop-image.png",
+    },
+    {
+        id: 11,
+        name: "👵 Olivia",
+        job: "shop keeper",
+        description: "A shop keeper who knows all the secrets of the town.",
+        image: "shopkeeper-olivia.png",
+    },
 ];
 
 export default characters;

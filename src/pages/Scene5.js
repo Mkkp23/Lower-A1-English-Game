@@ -6,11 +6,11 @@ import Dialog from "../components/Dialog";
 import Question from "../components/Question";
 import Scene from "../components/Scene";
 
-import backgroundImage from "../static/images/hotel-background.jpg";
+import backgroundImage from "../static/images/shop-background.jpg";
 
 import { UserDataContext } from "../contexts/UserContext";
 
-const Scene2 = () => {
+const Scene5 = () => {
     const navigate = useNavigate();
 
     const [dialog, setDialog] = useState(0);
@@ -28,15 +28,15 @@ const Scene2 = () => {
                         return (
                             <Dialog
                                 character={1}
-                                message="This is the hotel. Maybe we should talk with the receptionist."
+                                message="Such a nice shop! I love the smell of flowers in here."
                                 onContinue={() => setDialog(dialog + 1)}
                             />
                         );
                     case 1:
                         return (
                             <Dialog
-                                character={4}
-                                message="Hello! Welcome to our hotel. How can I assist you today?"
+                                character={11}
+                                message="Hi there kids! welcome to my shop, umm i can't remember the name of my shop, but i have the best flowers in town."
                                 onContinue={() => setDialog(dialog + 1)}
                             />
                         );
@@ -44,54 +44,66 @@ const Scene2 = () => {
                         return (
                             <Dialog
                                 character={1}
-                                message="We are looking for details about Chef who was murdered. Do you know anything about it?"
+                                message="We are here looking for details about the chef, do you know anything about him?"
                                 onContinue={() => setDialog(dialog + 1)}
                             />
                         );
                     case 3:
                         return (
-                            <Dialog
-                                character={4}
-                                message="Not much, but yesterday someone brought me a note. I think that can help you."
+                            <Question
+                                character={11}
+                                message="Of course! Everyday at 8 am, he comes to buy milk, it's at ... ummm... 8 am, is ..."
                                 onContinue={() => setDialog(dialog + 1)}
+                                answer="morning"
                             />
                         );
                     case 4:
                         return (
-                            <Scene
-                                character={4}
-                                scene={2}
-                                message="Here is the note. On the back there it says 1 3 2 5."
+                            <Question
+                                character={11}
+                                message="Oh yeah morning! Later, the sun was high. They came back, asking for lunch. It was ..."
                                 onContinue={() => setDialog(dialog + 1)}
+                                answer="afternoon"
                             />
                         );
                     case 5:
                         return (
                             <Question
-                                character={5}
-                                message="What do you think this means? 1 3 2 5."
+                                character={11}
+                                message="Yes afternoon! Before sunset, they stood near the hats. The sky was orange. That was in the ..."
                                 onContinue={() => setDialog(dialog + 1)}
-                                answer="park"
+                                answer="evening"
                             />
                         );
                     case 6:
                         return (
-                            <Dialog
-                                character={1}
-                                message="Ah, I see. You think it means park. I heard that the chef used to go there a lot."
+                            <Question
+                                character={11}
+                                message="oh evening! I remember now! but when the sky was dark, and it was ..."
                                 onContinue={() => setDialog(dialog + 1)}
+                                answer="night"
                             />
                         );
                     case 7:
                         return (
                             <Dialog
-                                character={1}
-                                message="Let's go to the park and see if we can find any clues."
+                                character={11}
+                                message="Night! Yes! He would go by my store, he would go to school at nights, i don't know why though."
                                 onContinue={() => setDialog(dialog + 1)}
                             />
                         );
                     case 8:
-                        navigate("/scene3");
+                        return (
+                            <Dialog
+                                character={1}
+                                message="School? at night? that's weird, we should check that out."
+                                onContinue={() => setDialog(dialog + 1)}
+                            />
+                        );
+
+
+                    case 9:
+                        navigate("/scene5");
                         break;
                     default:
                         return null;
@@ -101,4 +113,4 @@ const Scene2 = () => {
     );
 }
 
-export default Scene2;
+export default Scene5;
