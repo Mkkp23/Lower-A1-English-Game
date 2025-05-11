@@ -20,6 +20,16 @@ const scenes = [
         name: "box",
         image: "box-puzzle.png",
     },
+    {
+        id: 5,
+        name: "house",
+        image: "house-wilson.png",
+    },
+    {
+        id: 6,
+        name: "police station",
+        image: "police-station.png",
+    },
 ];
 
 export default scenes;

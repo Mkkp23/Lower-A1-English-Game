@@ -1,14 +1,14 @@
 const characters = [
     {
         id: 1,
-        name: "🕵️‍♀️ Detective Molly",
+        name: "🕵️‍♀️ Molly",
         job: "Lead Detective",
         description: "A sharp and witty detective with a knack for solving mysteries.",
         image: "detective-molly.png",
     },
     {
         id: 2,
-        name: "👨‍🍳 Chef John jr",
+        name: "👨‍🍳 John jr",
         job: "Chef",
         description: "A talented chef with a passion for cooking and a secret recipe.",
         image: "chef-john-jr.png",
@@ -76,6 +76,34 @@ const characters = [
         description: "A shop keeper who knows all the secrets of the town.",
         image: "shopkeeper-olivia.png",
     },
+    {
+        id: 12,
+        name: "🧑‍🏫 Sam",
+        job: "Teacher",
+        description: "A teacher who loves to teach",
+        image: "teacher-sam.png"
+    },
+    {
+        id: 13,
+        name: "📕 Lisa",
+        job: "Library Woman",
+        description: "A young woman that works at library",
+        image: "librarian-lisa.png"
+    },
+    {
+        id: 14,
+        name: "👴 James Wilson",
+        job: "Former Waiter",
+        description: "A former waiter who knows all the secrets of the restaurant.",
+        image: "james-wilson.png"
+    },
+    {
+        id: 15,
+        name: "2️⃣0️⃣ 20",
+        job: "You Passed",
+        description: "You passed the quiz",
+        image: "20-yay.png"
+    }
 ];
 
 export default characters;

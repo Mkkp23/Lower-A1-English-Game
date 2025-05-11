@@ -103,7 +103,7 @@ const Scene5 = () => {
 
 
                     case 9:
-                        navigate("/scene5");
+                        navigate("/scene6");
                         break;
                     default:
                         return null;

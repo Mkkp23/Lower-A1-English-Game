@@ -3,6 +3,7 @@ import React, { useState } from "react";
 const BaseDialog = ({
     characterObj,
     sceneObj = {},
+    audioObj = {},
     message,
     input,
     onInputChange,
@@ -37,6 +38,26 @@ const BaseDialog = ({
                 </div>
 
                 <p className="text-lg">{message}</p>
+
+                {/* Audio Section */}
+                {audioObj && audioObj.audio && (
+                    <div className="mt-4 flex justify-center">
+                        <div className="audio-container bg-background-light rounded-lg p-3 w-full max-w-md shadow-md border border-primary">
+                            <p className="text-sm font-medium text-primary mb-2 text-center">Listen to Recording</p>
+                            <audio
+                                controls
+                                className="w-full"
+                                controlsList="nodownload"
+                            >
+                                <source src={`/audios/${audioObj.audio}`} type="audio/mpeg" />
+                                <source src={`/audios/${audioObj.audio}`} type="audio/wav" />
+                                Your browser does not support the audio element.
+                            </audio>
+                        </div>
+                    </div>
+                )}
+
+                {/* Input Section */}
 
                 {showInput && (
                     <div className="mt-4">
