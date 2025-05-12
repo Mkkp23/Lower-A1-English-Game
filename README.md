@@ -1,70 +1,101 @@
-# Getting Started with Create React App
+# English Quiz Puzzle
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A React-based educational game that teaches English through an interactive murder mystery. Perfect for beginner English learners (A1 level) who want to practice vocabulary, numbers, and basic grammar in an engaging context.
 
-## Available Scripts
+## ✨ Features
 
-In the project directory, you can run:
+- 🔍 **Engaging Mystery Story**
+  - Follow a murder investigation from scene to scene
+  - Interact with various characters with distinct personalities
+  - Solve the mystery while learning English vocabulary
 
-### `npm start`
+- 📚 **Language Learning Elements**
+  - Practice essential vocabulary in context
+  - Learn numbers, time expressions, and everyday objects
+  - Master singular and plural forms naturally
+  - Improve listening comprehension with audio elements
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- 🎮 **Interactive Gameplay**
+  - Answer questions to progress through the story
+  - Built-in dictionary for reference
+  - Audio recordings for pronunciation practice
+  - Immediate feedback on answers
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- 🎨 **Rich Visual Experience**
+  - Character illustrations for each interaction
+  - Scene images that set the context
+  - Responsive design that works on all devices
+  - Clean, intuitive interface
+  - Notice that I have used AI for sake of image generation.
 
-### `npm test`
+## 🛠️ Technologies
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **Frontend Framework**: React 19.1
+- **Styling**: Tailwind CSS 3.4
+- **Routing**: React Router v7
+- **State Management**: React Context API
+- **Development**: Create React App
 
-### `npm run build`
+## 🚀 Getting Started
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Prerequisites
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Node.js (v14 or higher)
+- npm or yarn
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Installation
 
-### `npm run eject`
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/english-quiz-puzzle.git
+   cd english-quiz-puzzle 
+   ```
+2. Install dependencies:
+    ```bash
+    npm install
+    # or
+    yarn install
+    ```
+3. Start the development server:
+    ```bash
+    npm start
+    # or
+    yarn start
+    ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 📁 Project Structure
+```bash
+src/
+├── components/         # Reusable UI components
+│   ├── Audio.js        # Audio player component
+│   ├── BaseDialog.js   # Base dialog template
+│   ├── Dialog.js       # Character dialog component
+│   ├── Question.js     # Question interaction component
+│   ├── Scene.js        # Scene display component
+│   └── navbar.js       # Navigation and dictionary
+├── contexts/
+│   └── UserContext.js  # User data management
+├── data/
+│   ├── audios.js       # Audio file references
+│   ├── characters.js   # Character definitions
+│   ├── scenes.js       # Scene definitions
+│   └── words.js        # Dictionary translations
+├── pages/              # Game scenes
+│   ├── Start.js        # Game introduction
+│   ├── Scene1.js       # Restaurant scene
+│   ├── Scene2.js       # Hotel scene
+│   └── ...             # Additional scenes
+├── static/
+│   └── images/         # Background and character images
+└── App.js              # Main application component
+```
+## 🤝 Contributing
+Contributions are welcome! Please feel free to submit a Pull Request.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1.Fork the repository
+2.Create your feature branch (git checkout -b feature/NewLesson)
+3.Commit your changes (git commit -m 'Add some new vocabulary lesson')
+4.Push to the branch (git push origin feature/NewLesson)
+5.Open a Pull Request
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+I will always respond and see the pulls, thank you in advance.
