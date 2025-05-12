@@ -1,11 +1,26 @@
 import React, { useState } from 'react';
 
-const Navbar = () => {
-    const [showMap, setShowMap] = useState(false);
+import words from '../data/words';
 
-    const toggleMap = () => {
-        setShowMap(!showMap);
+const Navbar = () => {
+    const [showDict, setShowDict] = useState(false);
+    const [searchTerm, setSearchTerm] = useState('');
+    const [searchResults, setSearchResults] = useState(words);
+
+    const toggleDict = () => {
+        setShowDict(!showDict);
     };
+
+    const handleSearch = (event) => {
+        const term = event.target.value;
+        setSearchTerm(term);
+        if (term) {
+            const results = words.filter(word => { return word.word.toLowerCase().includes(term.toLowerCase()) })
+            setSearchResults(results);
+        } else {
+            setSearchResults(words);
+        }
+    }
 
     return (
         <>
@@ -15,27 +30,40 @@ const Navbar = () => {
                 </div>
 
                 <button
-                    onClick={toggleMap}
+                    onClick={toggleDict}
                     className="bg-secondary hover:bg-secondary-dark text-light px-4 py-2 rounded-md transition duration-300 flex items-center"
                 >
-                    <span className="mr-2">Map</span>
-                    <span role="img" aria-label="map">🗺️</span>
+                    <span className="mr-2">Dictionary</span>
+                    <span role="img" aria-label="dictionary">📕</span>
                 </button>
             </nav>
 
-            {showMap && (
-                <div className="fixed inset-x-0 top-16 mx-auto max-w-4xl bg-light p-6 rounded-md shadow-lg z-10 border border-neutral">
+            {showDict && (
+                <div className="fixed inset-x-0 top-16 mx-auto max-w-4xl h-[500px] bg-light p-6 rounded-md shadow-lg z-10 border border-neutral">
                     <div className="flex justify-between items-center mb-4">
-                        <h2 className="text-xl font-bold text-primary">Crime Scene Map</h2>
+                        <h2 className="text-xl font-bold text-primary">Helping Dictionary</h2>
                         <button
-                            onClick={toggleMap}
+                            onClick={toggleDict}
                             className="text-neutral hover:text-secondary"
                         >
                             ✕
                         </button>
                     </div>
-                    <div className="bg-tertiary p-4 rounded-md h-64 flex items-center justify-center border-2 border-accent">
-                        <p className="text-light">City map with crime scenes marked</p>
+                    <div className="bg-tertiary p-4 rounded-md h-[400px] flex flex-col items-center justify-start border-2 border-accent">
+                        <input
+                            type="text"
+                            placeholder="Search..."
+                            value={searchTerm}
+                            onChange={handleSearch}
+                            className="w-full p-2 border border-neutral rounded-md"
+                        />
+                        <div className="mt-4 h-full w-full flex flex-col items-center justify-start overflow-y-auto bg-accent rounded-md">
+                            {searchResults.map((word, index) => (
+                                <div key={index} className="p-2 w-full text-center border-b border-neutral">
+                                    <strong>{word.word}</strong>: {word.translation}
+                                </div>
+                            ))}
+                        </div>
                     </div>
                 </div>
             )}
